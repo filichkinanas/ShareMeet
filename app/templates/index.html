@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col mx-auto">
+    <h1>{% block title %} Доступ к этому сайту {% endblock %}</h1>
+    
+    <img src="{{ qrcode( "http://{}:5000/shared_files".format(wlan_ip))  }}">
+
+</div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Файлы</h1>
+  
+
+  <div class="list-group">
+    {% for file in files.files %}
+    
+    <label class="list-group-item">
+      <a class="row align-items-center" href="/shared_files/{{file}}">
+       
+        <div class="col-2 btn btn-primary">{{file.split('.')[-1].upper()}}</div>
+        <div class="col">{{file}}</div>
+        </a>
+      </label>
+    {% endfor %}
+  </div>
+
+{% endblock %}

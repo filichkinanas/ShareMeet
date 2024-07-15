@@ -1,0 +1,7 @@
+.flaskenv
+.DS_Store
+.idea
+__pycache__
+venv
+share
+/app/comments.db
