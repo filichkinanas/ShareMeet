@@ -1,7 +1,6 @@
 from flask import render_template, redirect, url_for, flash, send_file
 import os
-import socket
-from app import app, db
+from app import app, db, qr_svg
 from .forms import CommentForm
 from .models import Comments
 
@@ -9,7 +8,7 @@ from .models import Comments
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', wlan_ip = socket.gethostbyname(socket.gethostname()))
+    return render_template('index.html', svg_img=qr_svg)
 
 
 @app.route('/shared_files')
