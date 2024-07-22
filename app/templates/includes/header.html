@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+    <div class="container">
+          <a class="navbar-brand" href="/">ShareMeet</a>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/shared_files">Файлы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% if request.remote_addr == '127.0.0.1' %}/comments{% else %}/add_comment {% endif %}">Обратная связь</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/about">О проекте</a>
+              </li>
+            </ul>
+          </div>
+    </div>
+  </nav>
+  <h1 class="container">{{ head }}</h1>
+</header>

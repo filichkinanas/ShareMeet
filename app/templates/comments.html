@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for line in comments %}
+<div class="card">
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{ line.comment }}</p>
+        <footer class="blockquote-footer">{{ line.name }} в {{ line.create_date }}
+            {% if line.contact %}
+            (<i>{{line.contact }}</i>)
+            {% endif %}
+        </footer>
+      </blockquote>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
